@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px 16px;
+}
+
+.categorie {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  button {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+
+.subCategorie {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  color: #000 !important;
+}
+
+.link:hover {
+  color: #722ed1 !important;
+}

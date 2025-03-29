@@ -1,0 +1,39 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.block {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: 16px;
+  background-color: #f9f0ff;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 10px;
+  padding: 12px;
+  background: white;
+
+  span,
+  h5 {
+    color: #722ed1;
+  }
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
