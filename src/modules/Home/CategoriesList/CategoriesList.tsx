@@ -15,8 +15,8 @@ const CategoriesList = () => {
     <div className={css.wrapper}>
       <Typography.Title level={2}>Услуги в {selectedCity}</Typography.Title>
       <div className={css.categories}>
-        {categories.map((item) => (
-          <div className={css.categorie}>
+        {categories.map((item, index) => (
+          <div className={css.categorie} key={index}>
             <Button
               variant="text"
               style={{

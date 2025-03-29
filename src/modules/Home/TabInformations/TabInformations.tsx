@@ -7,6 +7,7 @@ import css from "./TabInformations.module.scss";
 import { Flex, Typography } from "antd";
 import ServiceRequest from "../../../components/ServiceRequest/ServiceRequest";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 enum TabType {
   Services = "Услуги",
@@ -37,9 +38,14 @@ const tabData = [
 
 const TabInformations = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleCreateClick = () => {
     setIsOpen(true);
+  };
+
+  const onRedirectCategory = () => {
+    navigate("/category");
   };
 
   return (
@@ -49,7 +55,13 @@ const TabInformations = () => {
         <Flex
           key={id}
           className={css.block}
-          onClick={title === TabType.Create ? handleCreateClick : undefined}
+          onClick={
+            title === TabType.Create
+              ? handleCreateClick
+              : title === TabType.Services
+              ? onRedirectCategory
+              : undefined
+          }
         >
           {icon}
           <Typography.Title

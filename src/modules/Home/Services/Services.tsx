@@ -113,16 +113,24 @@ const Services = () => {
       </div>
       <div className={css.container}>
         <div className={css.line}>
-          {servicesData.slice(0, 4).map((service) => (
-            <div className={css.block} style={{ flex: service.flex }}>
+          {servicesData.slice(0, 4).map((service, index) => (
+            <div
+              className={css.block}
+              key={`item-service-${index}`}
+              style={{ flex: service.flex }}
+            >
               <Typography.Text>{service.title}</Typography.Text>
               <img src={service.image} alt={service.title} />
             </div>
           ))}
         </div>
         <div className={css.line}>
-          {servicesData.slice(4).map((service) => (
-            <div className={css.block} style={{ flex: service.flex }}>
+          {servicesData.slice(4).map((service, index) => (
+            <div
+              className={css.block}
+              key={`item-service-${index}`}
+              style={{ flex: service.flex }}
+            >
               <Typography.Text>{service.title}</Typography.Text>
               <img src={service.image} alt={service.title} />
             </div>
